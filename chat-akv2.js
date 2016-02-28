@@ -16,12 +16,22 @@ if (Meteor.isClient) {
 
         Messages.insert({
           message: value,
-          timestamp: new Date()
-            // user: Meteor.userId()
+          timestamp: new Date(),
+          user: Meteor.userId()
         });
       }
     }
-  })
+  });
+
+Template.message.helpers({
+  user: function(){
+    return Meteor.users.findOne({_id: this.user});
+  }
+});
+
+  Accounts.ui.config({
+    passwordSignupFields: "USERNAME_AND_OPTIONAL_EMAIL"
+  });
 }
 
 if (Meteor.isServer) {

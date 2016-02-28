@@ -1,9 +1,9 @@
 /* CSS declarations go here */
-*{
+/**{
   background-color: black;
   color: white;
 }
 textarea{
   background-color: white;
   color: black;
-}
+}*/
