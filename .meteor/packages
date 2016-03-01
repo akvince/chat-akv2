@@ -20,3 +20,5 @@ accounts-password
 accounts-ui
 momentjs:moment
 filive:style
+autopublish
+insecure
